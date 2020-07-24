@@ -9,6 +9,18 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/all.js" integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ" crossorigin="anonymous">
     </script>
+    <style>
+        .card {
+            display: flex;
+            margin-right: 15px;
+            margin-left: 15px;
+            margin-bottom: 20px;
+        }
+        
+        img {
+            width: auto;
+        }
+    </style>
 </head>
 
 <body>
@@ -21,11 +33,10 @@
             </form>
             <button class="btn btn-primary" id="cart"><i class="fas fa-shopping-cart"></i>(0)</button>
         </nav>
-        <!-- <div class="row"> -->
-        <div class="row mt-2" id="listBarang">
+        <div class="row mt-2 justify-content-md-center" id="listBarang">
 
         </div>
-        <!-- </div> -->
+    </div>
     </div>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script>
@@ -39,7 +50,7 @@
         function printItems(array) {
             var listCard = ""
             for (var i = 0; i < array.length; i++) {
-                listCard += `<div class="card text-center col-sm-4" style="width: 18rem;">
+                listCard += `<div class="card text-center col-sm-3 col-md-3 col align-item-center" style="max-width: 100%;">
                     <img src="${array[i][4]}" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title" id="itemName">${array[i][1]}</h5>
